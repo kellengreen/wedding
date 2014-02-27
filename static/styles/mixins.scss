@@ -1,0 +1,21 @@
+@mixin transition($duration) {
+    -webkit-transition: all #{$duration} ease-out;  /* Safari 3.2+ */
+            transition: all #{$duration} ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+@mixin transition($duration) {
+    -webkit-transition: all #{$duration} ease-out;  /* Safari 3.2+ */
+            transition: all #{$duration} ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+
+@mixin bg-image($i) {
+    &:nth-of-type(#{$i}) {
+        background-image: url(/static/images/bg#{$i}.jpg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        -webkit-filter: grayscale(100%);
+    }
+}

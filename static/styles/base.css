@@ -1,0 +1,81 @@
+html {
+  height: 100%; }
+
+.bg-images {
+  display: flex; }
+  .bg-images > div {
+    flex-basis: 20%;
+    height: 1000px;
+    padding: 50px;
+    -webkit-transition: all 0.75s ease-out;
+    /* Safari 3.2+ */
+    transition: all 0.75s ease-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ }
+    .bg-images > div:nth-of-type(1) {
+      background-image: url(/static/images/bg1.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      -webkit-filter: grayscale(100%); }
+    .bg-images > div:nth-of-type(2) {
+      background-image: url(/static/images/bg2.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      -webkit-filter: grayscale(100%); }
+    .bg-images > div:nth-of-type(3) {
+      background-image: url(/static/images/bg3.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      -webkit-filter: grayscale(100%); }
+    .bg-images > div:nth-of-type(4) {
+      background-image: url(/static/images/bg4.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      -webkit-filter: grayscale(100%); }
+    .bg-images > div:nth-of-type(5) {
+      background-image: url(/static/images/bg5.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      -webkit-filter: grayscale(100%); }
+    .bg-images > div:hover {
+      -webkit-filter: grayscale(0%);
+      flex-basis: 200%; }
+      .bg-images > div:hover .content-box {
+        display: block; }
+
+.header {
+  background-color: black; }
+  .header a {
+    font-family: 'Reenie Beanie', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-right: 25px;
+    -webkit-transition: all 0.25s ease-out;
+    /* Safari 3.2+ */
+    transition: all 0.25s ease-out;
+    /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ }
+    .header a:hover {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.9); }
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 25px;
+  display: none;
+  -webkit-transition: all 0.75s ease-out;
+  /* Safari 3.2+ */
+  transition: all 0.75s ease-out;
+  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ }
+  .content-box p:after {
+    content: "Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \ Porchetta rump boudin kevin ribeye. Ribeye frankfurter ham andouille, capicola shank pig tri-tip fatback leberkas tongue shankle. \ Drumstick t-bone sirloin shoulder, tri-tip capicola chuck beef ground round ham meatloaf jowl frankfurter salami."; }

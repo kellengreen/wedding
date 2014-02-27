@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+html {
+    height: 100%;
+}
+
+.bg-images {
+    display: flex;
+
+    &>div {
+        flex-basis: 20%;
+        height: 1000px;
+        padding: 50px;
+        @include transition(.75s);
+        @for $i from 1 through 5 {
+            @include bg-image($i);
+        }
+
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            flex-basis: 200%;
+
+            .content-box {
+                display: block;
+            }
+        }
+    }
+}
+
+.header {
+    background-color: black;
+
+    a {
+        font-family: 'Reenie Beanie', cursive;
+        color: $nav-color;
+        text-shadow: 2px 2px 2px $nav-shadow;
+        margin-right: 25px;
+        @include transition(.25s);
+
+        &:hover {
+            text-decoration: none;
+            color: $nav-shadow;
+            text-shadow: 2px 2px 2px $nav-color;
+        }
+    }
+}
+
+.content-box {
+    background-color: hsla(0, 100%, 100%, .50);
+    border-radius: 5px;
+    padding: 25px;
+    display: none;
+    @include transition(.75s);
+
+    p:after {
+        content:"Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \
+Porchetta rump boudin kevin ribeye. Ribeye frankfurter ham andouille, capicola shank pig tri-tip fatback leberkas tongue shankle. \
+Drumstick t-bone sirloin shoulder, tri-tip capicola chuck beef ground round ham meatloaf jowl frankfurter salami.";
+    }
+}
