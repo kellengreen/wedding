@@ -4,41 +4,85 @@
     <title>ZagWedding</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Reenie+Beanie">
+{#    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">#}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco'>
     <link rel="stylesheet" href="/static/styles/base.css">
 </head>
 <body ng-controller="weddingCtrl">
-    <div class="bg-images">
-        <div class="">
-            <div class="content-box">
+    <nav>
+        <a ng-class="{active: viewState == 'couple'}"
+           ng-click="viewChange('couple')">The Couple</a>
+        <a ng-class="{active: viewState == 'event'}"
+           ng-click="viewChange('event')">The Big Day</a>
+        <a ng-class="{active: viewState == 'cast'}"
+           ng-click="viewChange('cast')">The Supporting Cast</a>
+        <a ng-class="{active: viewState == 'city'}"
+           ng-click="viewChange('city')">The City</a>
+        <a ng-class="{active: viewState == 'laughs'}"
+           ng-click="viewChange('laughs')">The Pics</a>
+    </nav>
+    <div class="pages"
+         ng-class="{active: viewState}">
+        <div class="page"
+             ng-class="{active: viewState == 'couple'}"
+             ng-click="viewChange('couple')">
+            <div class="content">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
-        <div class="">
-            <div class="content-box">
+        <div class="page"
+             ng-class="{active: viewState == 'event'}"
+             ng-click="viewChange('event')">
+            <div class="content">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
-        <div class="">
-            <div class="content-box">
+        <div class="page"
+             ng-class="{active: viewState == 'cast'}"
+             ng-click="viewChange('cast')">
+            <div class="content">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
-        <div class="">
-            <div class="content-box">
+        <div class="page"
+             ng-class="{active: viewState == 'city'}"
+             ng-click="viewChange('city')">
+            <div class="content">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
-        <div class="">
-            <div class="content-box">
+        <div class="page"
+             ng-class="{active: viewState == 'laughs'}"
+             ng-click="viewChange('laughs')">
+            <div class="content">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
-    <script src="/static/scripts/ui-bootstrap-0.10.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
     <script src="/static/scripts/main.js"></script>
 </body>
 </html>

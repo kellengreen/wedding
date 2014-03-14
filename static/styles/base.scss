@@ -5,53 +5,76 @@ html {
     height: 100%;
 }
 
-.bg-images {
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $nav-bg;
+
+    a {
+        display: inline-block;
+        line-height: 56px;
+        font-size: 28px;
+        font-family: 'Sue Ellen Francisco', cursive;
+        text-decoration: none;
+        color: $nav-color;
+        margin: 0 15px;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            @include transition(.25s);
+            color: $nav-active;
+            text-decoration: none;
+        }
+    }
+
+    a:nth-of-type(1) {
+
+    }
+}
+
+.pages {
+    margin-top: 55px;
     display: flex;
 
-    &>div {
+    &.active .page {
+        flex-basis: 5%;
+    }
+
+    .page {
         flex-basis: 20%;
         height: 1000px;
-        padding: 50px;
-        @include transition(.75s);
+        @include transition($page-transition);
+
         @for $i from 1 through 5 {
             @include bg-image($i);
         }
 
-        &:hover {
-            -webkit-filter: grayscale(0%);
-            flex-basis: 200%;
+        &.active {
 
-            .content-box {
-                display: block;
+            @include grayscale(0%);
+            flex-basis: 80%;
+
+            .content {
+                opacity: 1;
+                @include transform(translateY(0));
             }
         }
     }
 }
 
-.header {
-    background-color: black;
-
-    a {
-        font-family: 'Reenie Beanie', cursive;
-        color: $nav-color;
-        text-shadow: 2px 2px 2px $nav-shadow;
-        margin-right: 25px;
-        @include transition(.25s);
-
-        &:hover {
-            text-decoration: none;
-            color: $nav-shadow;
-            text-shadow: 2px 2px 2px $nav-color;
-        }
-    }
-}
-
-.content-box {
-    background-color: hsla(0, 100%, 100%, .50);
-    border-radius: 5px;
+.content {
+    font-size: 16px;
+    background-color: $content-bg;
+    border-radius: 10px;
+    margin: 25px;
     padding: 25px;
-    display: none;
-    @include transition(.75s);
+    opacity: 0;
+    @include transition($content-transition $page-transition);
+    @include transform(translateY(-1000px));
 
     p:after {
         content:"Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \
