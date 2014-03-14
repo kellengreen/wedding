@@ -25,7 +25,7 @@
     <div class="pages"
          ng-class="{active: viewState}">
         <div class="page"
-             ng-class="{active: viewState == 'couple'}"
+             ng-class="{selected: viewState == 'couple'}"
              ng-click="viewChange('couple')">
             <div class="content">
                 <p></p>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="page"
-             ng-class="{active: viewState == 'event'}"
+             ng-class="{selected: viewState == 'event'}"
              ng-click="viewChange('event')">
             <div class="content">
                 <p></p>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="page"
-             ng-class="{active: viewState == 'cast'}"
+             ng-class="{selected: viewState == 'cast'}"
              ng-click="viewChange('cast')">
             <div class="content">
                 <p></p>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="page"
-             ng-class="{active: viewState == 'city'}"
+             ng-class="{selected: viewState == 'city'}"
              ng-click="viewChange('city')">
             <div class="content">
                 <p></p>
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="page"
-             ng-class="{active: viewState == 'laughs'}"
+             ng-class="{selected: viewState == 'laughs'}"
              ng-click="viewChange('laughs')">
             <div class="content">
                 <p></p>
@@ -81,8 +81,9 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
     <script src="/static/scripts/main.js"></script>
 </body>
 </html>

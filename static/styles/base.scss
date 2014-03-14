@@ -40,28 +40,46 @@ nav {
     margin-top: 55px;
     display: flex;
 
-    &.active .page {
+    &.selected .page {
         flex-basis: 5%;
     }
+}
 
-    .page {
-        flex-basis: 20%;
-        height: 1000px;
-        @include transition($page-transition);
+.page {
 
-        @for $i from 1 through 5 {
-            @include bg-image($i);
-        }
+    flex-basis: 20%;
+    height: 1000px;
+    @include transition($page-transition);
 
-        &.active {
+    @for $i from 1 through 5 {
+        @include bg-image($i);
+    }
 
-            @include grayscale(0%);
-            flex-basis: 80%;
+    &.selected-add {
+//            -webkit-transition-delay: 1s;
+    }
 
-            .content {
-                opacity: 1;
-                @include transform(translateY(0));
-            }
+    &.selected-add-active {
+        -webkit-transition-delay: 1s;
+    }
+
+    &.selected-remove {
+        -webkit-transition-delay: 1s;
+    }
+
+    &.selected-remove-active {
+        -webkit-transition-delay: 1s;
+
+    }
+
+    &.selected {
+
+        flex-basis: 80%;
+        @include grayscale(0%);
+
+        .content {
+            opacity: 1;
+            @include transform(translateY(0));
         }
     }
 }
@@ -73,8 +91,8 @@ nav {
     margin: 25px;
     padding: 25px;
     opacity: 0;
-    @include transition($content-transition $page-transition);
-    @include transform(translateY(-1000px));
+//    @include transition($content-transition $page-transition);
+//    @include transform(translateY(-1000px));
 
     p:after {
         content:"Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \

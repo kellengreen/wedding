@@ -26,55 +26,62 @@ nav {
 .pages {
   margin-top: 55px;
   display: flex; }
-  .pages.active .page {
+  .pages.selected .page {
     flex-basis: 5%; }
-  .pages .page {
-    flex-basis: 20%;
-    height: 1000px;
-    -webkit-transition: 0.75s;
-    transition: 0.75s; }
-    .pages .page:nth-of-type(1) {
-      background-image: url(/static/images/round1_v01.jpg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      -webkit-filter: grayscale(100%); }
-    .pages .page:nth-of-type(2) {
-      background-image: url(/static/images/round2_v01.jpg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      -webkit-filter: grayscale(100%); }
-    .pages .page:nth-of-type(3) {
-      background-image: url(/static/images/round3_v01.jpg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      -webkit-filter: grayscale(100%); }
-    .pages .page:nth-of-type(4) {
-      background-image: url(/static/images/round4_v01.jpg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      -webkit-filter: grayscale(100%); }
-    .pages .page:nth-of-type(5) {
-      background-image: url(/static/images/round5_v01.jpg);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      -webkit-filter: grayscale(100%); }
-    .pages .page.active {
-      -webkit-filter: grayscale(0%);
-      flex-basis: 80%; }
-      .pages .page.active .content {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0); }
+
+.page {
+  flex-basis: 20%;
+  height: 1000px;
+  -webkit-transition: 0.75s;
+  transition: 0.75s; }
+  .page:nth-of-type(1) {
+    background-image: url(/static/images/round1_v01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); }
+  .page:nth-of-type(2) {
+    background-image: url(/static/images/round2_v01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); }
+  .page:nth-of-type(3) {
+    background-image: url(/static/images/round3_v01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); }
+  .page:nth-of-type(4) {
+    background-image: url(/static/images/round4_v01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); }
+  .page:nth-of-type(5) {
+    background-image: url(/static/images/round5_v01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); }
+  .page.selected-add-active {
+    -webkit-transition-delay: 1s; }
+  .page.selected-remove {
+    -webkit-transition-delay: 1s; }
+  .page.selected-remove-active {
+    -webkit-transition-delay: 1s; }
+  .page.selected {
+    flex-basis: 80%;
+    -webkit-filter: grayscale(0%); }
+    .page.selected .content {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
 
 .content {
   font-size: 16px;
@@ -82,10 +89,6 @@ nav {
   border-radius: 10px;
   margin: 25px;
   padding: 25px;
-  opacity: 0;
-  -webkit-transition: 0.75s 0.75s;
-  transition: 0.75s 0.75s;
-  -webkit-transform: translateY(-1000px);
-  transform: translateY(-1000px); }
+  opacity: 0; }
   .content p:after {
     content: "Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \ Porchetta rump boudin kevin ribeye. Ribeye frankfurter ham andouille, capicola shank pig tri-tip fatback leberkas tongue shankle. \ Drumstick t-bone sirloin shoulder, tri-tip capicola chuck beef ground round ham meatloaf jowl frankfurter salami."; }

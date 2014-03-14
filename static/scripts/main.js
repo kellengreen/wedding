@@ -1,16 +1,6 @@
 console.info('G.O.N.Z.A.G.A!');
 
-var app = angular.module('weddingApp', ['ngRoute']);
-
-//app.config(function($routeProvider, $locationProvider) {
-//
-//    $routeProvider.when('/about', {
-//        controller: 'weddingCtrl'
-//    });
-//
-//    $locationProvider.html5Mode(false);
-//
-//});
+var app = angular.module('weddingApp', ['ngRoute', 'ngAnimate']);
 
 app.controller('weddingCtrl', function ($scope) {
 
