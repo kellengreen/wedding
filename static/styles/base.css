@@ -1,94 +1,98 @@
-html {
+html,
+body {
   height: 100%; }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+h4 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 25px; }
+  h4 span {
+    color: gray; }
+
+p {
+  font-size: 16px;
+  line-height: 25px; }
+
+.separator {
+  margin: 25px 0; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.close-btn {
+  font-size: 25px;
+  cursor: pointer;
+  color: rgba(198, 36, 77, 0.6);
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
+  .close-btn:hover {
+    color: #c6244d; }
+
+.nav {
   z-index: 1;
   background-color: black; }
-  nav a {
+  .nav a {
     display: inline-block;
     line-height: 56px;
     font-size: 28px;
-    font-family: 'Sue Ellen Francisco', cursive;
     text-decoration: none;
     color: white;
     margin: 0 15px;
     cursor: pointer; }
-    nav a:hover, nav a.active {
+    .nav a:hover, .nav a.selected {
       -webkit-transition: 0.25s;
       transition: 0.25s;
-      color: rgba(255, 255, 255, 0.65);
+      color: #448cca;
       text-decoration: none; }
+  .nav a:nth-of-type(1) {
+    font-family: 'Sail', cursive; }
+  .nav a:nth-of-type(2) {
+    font-family: 'Montez', cursive; }
+  .nav a:nth-of-type(3) {
+    font-family: 'The Girl Next Door', cursive; }
+  .nav a:nth-of-type(4) {
+    font-family: 'Finger Paint', cursive; }
+  .nav a:nth-of-type(5) {
+    font-family: 'Nothing You Could Do', cursive; }
 
-.pages {
-  margin-top: 55px;
-  display: flex; }
-  .pages.selected .page {
-    flex-basis: 5%; }
+.sections {
+  display: flex;
+  height: 100%; }
 
-.page {
+.section {
+  display: flex;
+  flex-direction: column;
   flex-basis: 20%;
-  height: 1000px;
+  background-position: 50% 50%;
+  background-size: cover;
   -webkit-transition: 0.75s;
   transition: 0.75s; }
-  .page:nth-of-type(1) {
-    background-image: url(/static/images/round1_v01.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-filter: grayscale(100%); }
-  .page:nth-of-type(2) {
-    background-image: url(/static/images/round2_v01.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-filter: grayscale(100%); }
-  .page:nth-of-type(3) {
-    background-image: url(/static/images/round3_v01.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-filter: grayscale(100%); }
-  .page:nth-of-type(4) {
-    background-image: url(/static/images/round4_v01.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-filter: grayscale(100%); }
-  .page:nth-of-type(5) {
-    background-image: url(/static/images/round5_v01.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-filter: grayscale(100%); }
-  .page.selected-add-active {
-    -webkit-transition-delay: 1s; }
-  .page.selected-remove {
-    -webkit-transition-delay: 1s; }
-  .page.selected-remove-active {
-    -webkit-transition-delay: 1s; }
-  .page.selected {
-    flex-basis: 80%;
-    -webkit-filter: grayscale(0%); }
-    .page.selected .content {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-      transform: translateY(0); }
+  .section:nth-of-type(1) {
+    background-image: url("/static/images/bg1_v01.jpg"); }
+  .section:nth-of-type(2) {
+    background-image: url("/static/images/bg2_v01.jpg"); }
+  .section:nth-of-type(3) {
+    background-image: url("/static/images/bg3_v01.jpg"); }
+  .section:nth-of-type(4) {
+    background-image: url("/static/images/bg4_v01.jpg"); }
+  .section:nth-of-type(5) {
+    background-image: url("/static/images/bg5_v01.jpg"); }
+  .active .section {
+    flex-basis: 5%; }
+  .section.selected {
+    flex-basis: 80%; }
 
 .content {
-  font-size: 16px;
+  overflow: auto;
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 25px;
   padding: 25px;
-  opacity: 0; }
-  .content p:after {
-    content: "Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \ Porchetta rump boudin kevin ribeye. Ribeye frankfurter ham andouille, capicola shank pig tri-tip fatback leberkas tongue shankle. \ Drumstick t-bone sirloin shoulder, tri-tip capicola chuck beef ground round ham meatloaf jowl frankfurter salami."; }
+  -webkit-transition: 1.25s ease;
+  transition: 1.25s ease;
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%); }
+  .selected .content {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }

@@ -1,102 +1,133 @@
-@import "variables";
 @import "mixins";
 
-html {
+// globals
+html,
+body {
     height: 100%;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+h4 {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 25px;
+
+    span {
+        color: hsl(0, 0%, 50%);
+    }
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+// shared
+.separator {
+        margin: 25px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.close-btn {
+    font-size: 25px;
+    cursor: pointer;
+    color: hsla(345, 69%, 46%, .6);
+    @include transition(.25s);
+
+    &:hover {
+        color: hsla(345, 69%, 46%, 1);
+    }
+}
+
+// top navigation
+.nav {
     z-index: 1;
-    background-color: $nav-bg;
+    background-color: hsl(0, 0%, 0%);
 
     a {
         display: inline-block;
         line-height: 56px;
         font-size: 28px;
-        font-family: 'Sue Ellen Francisco', cursive;
         text-decoration: none;
-        color: $nav-color;
+        color: hsl(0, 0%, 100%);
         margin: 0 15px;
         cursor: pointer;
 
         &:hover,
-        &.active {
+        &.selected {
             @include transition(.25s);
-            color: $nav-active;
+            color: hsl(208, 56%, 53%);
             text-decoration: none;
         }
     }
 
     a:nth-of-type(1) {
+        font-family: 'Sail', cursive;
+    }
 
+    a:nth-of-type(2) {
+        font-family: 'Montez', cursive;
+    }
+
+    a:nth-of-type(3) {
+        font-family: 'The Girl Next Door', cursive;
+    }
+
+    a:nth-of-type(4) {
+        font-family: 'Finger Paint', cursive;
+    }
+
+    a:nth-of-type(5) {
+        font-family: 'Nothing You Could Do', cursive;
     }
 }
 
-.pages {
-    margin-top: 55px;
+// sections container
+.sections {
     display: flex;
-
-    &.selected .page {
-        flex-basis: 5%;
-    }
+    height: 100%;
 }
 
-.page {
-
+// individual sections
+.section {
+    display: flex;
+    flex-direction: column;
     flex-basis: 20%;
-    height: 1000px;
-    @include transition($page-transition);
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include transition(.75s);
 
     @for $i from 1 through 5 {
-        @include bg-image($i);
+        &:nth-of-type(#{$i}) {
+            background-image: url("/static/images/bg#{$i}_v01.jpg");
+        }
     }
 
-    &.selected-add {
-//            -webkit-transition-delay: 1s;
-    }
-
-    &.selected-add-active {
-        -webkit-transition-delay: 1s;
-    }
-
-    &.selected-remove {
-        -webkit-transition-delay: 1s;
-    }
-
-    &.selected-remove-active {
-        -webkit-transition-delay: 1s;
-
+    .active & {
+        flex-basis: 5%;
     }
 
     &.selected {
-
         flex-basis: 80%;
-        @include grayscale(0%);
-
-        .content {
-            opacity: 1;
-            @include transform(translateY(0));
-        }
     }
 }
 
+// section content
 .content {
-    font-size: 16px;
-    background-color: $content-bg;
-    border-radius: 10px;
+    overflow: auto;
+    background-color: hsla(0, 100%, 100%, .75);
+    border-radius: 15px;
     margin: 25px;
     padding: 25px;
-    opacity: 0;
-//    @include transition($content-transition $page-transition);
-//    @include transform(translateY(-1000px));
 
-    p:after {
-        content:"Bacon ipsum dolor sit amet ham flank strip steak rump landjaeger brisket, ball tip pork chop biltong. \
-Porchetta rump boudin kevin ribeye. Ribeye frankfurter ham andouille, capicola shank pig tri-tip fatback leberkas tongue shankle. \
-Drumstick t-bone sirloin shoulder, tri-tip capicola chuck beef ground round ham meatloaf jowl frankfurter salami.";
+    @include transition(1.25s ease);
+    @include transform(translateY(-300%));
+
+    .selected & {
+        @include transform(translateY(0));
     }
 }
