@@ -121,7 +121,7 @@ p {
     border-radius: 15px;
     margin: 15px;
     padding: 15px;
-    @include transition(all 1.25s ease);
+    @include transition(1.25s);
     @include transform(translateY(-300%));
 
     .selected & {

@@ -95,8 +95,8 @@ p {
   border-radius: 15px;
   margin: 15px;
   padding: 15px;
-  -webkit-transition: all 1.25s ease;
-  transition: all 1.25s ease;
+  -webkit-transition: 1.25s;
+  transition: 1.25s;
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%); }
   .selected .content {
