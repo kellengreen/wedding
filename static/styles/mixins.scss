@@ -7,3 +7,20 @@
     -webkit-transform: #{$value};  // Chrome, Safari 3.1+
             transform: #{$value};  // Firefox 16+, IE 10+, Opera 12.10+
 }
+
+//@mixin breakpoint($point) {
+//    @if $point == papa-bear {
+//        @media (max-width: 1600px) { @content; }
+//    }
+//    @else if $point == mama-bear {
+//        @media (max-width: 1250px) { @content; }
+//    }
+//    @else if $point == baby-bear {
+//        @media (max-width: 650px)  { @content; }
+//    }
+//}
+//
+//@media (max-width: @screen-xs-max) { ... }
+//@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+//@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+//@media (min-width: @screen-lg-min) { ... }

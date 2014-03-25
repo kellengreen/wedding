@@ -4,184 +4,340 @@
     <title>ZagWedding</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Sail|Montez|The+Girl+Next+Door|Finger+Paint|Nothing+You+Could+Do|Sue+Ellen+Francisco">
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Sail|Montez|The+Girl+Next+Door|Finger+Paint|Nothing+You+Could+Do|Sue+Ellen+Francisco">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/styles/base.css">
+    <link rel="stylesheet" href="/static/styles/bootstrap.css">
     <link rel="icon" href="/static/images/favicon152_v01.png">
     <link rel="apple-touch-icon-precomposed" href="/static/images/favicon152_v01.png">
 </head>
 <body ng-controller="weddingCtrl">
-    <div class="main">
-        <div class="nav">
+<div class="window">
+<div class="nav container-fluid">
+    <div class="row">
+        <div class="hidden-xs hidden-sm col-md-12">
             <a section="couple">The Couple</a>
             <a section="day">The Big Day</a>
             <a section="cast">The Supporting Cast</a>
             <a section="city">The City</a>
             <a section="pics">The Pics</a>
         </div>
-        <div class="sections" ng-class="{active: section}">
-            <div section="couple" class="section container-fluid">
-                <div class="content">
-                    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-                    <div class="separator">
-                        <p></p>
-                    </div>
-                </div>
+    </div>
+</div>
+<div class="sections" ng-class="{active: section}">
+<div section="couple" class="section container-fluid">
+    <div class="content">
+        <span section class="close-btn glyphicon glyphicon-remove-circle"></span>
+        <h4>Kellen and Alison</h4>
+
+        <p>Bacon ipsum dolor sit amet turkey swine pork, short ribs pork loin beef ribs brisket tenderloin tongue jerky
+            pork belly shankle spare ribs. Cow brisket andouille pork loin swine. Kevin beef
+            ribeye bresaola, short loin pastrami beef ribs turducken pancetta cow venison jerky boudin
+            t-bone rump. Tenderloin pastrami leberkas doner jerky, sirloin swine kielbasa ham shank fatback.
+            Hamburger pork belly andouille swine jowl.</p>
+
+        <p>Pork andouille ham salami beef ribs shoulder ham hock swine flank jowl leberkas chuck corned
+            beef. Ground round meatloaf brisket turducken jowl boudin cow swine short ribs turkey pork loin
+            bacon. Porchetta fatback short ribs, venison capicola pancetta beef beef ribs swine shoulder
+            pastrami. Leberkas cow short ribs pig meatball swine. Kielbasa pork chop shank bacon tri-tip
+            sausage drumstick strip steak chicken brisket andouille filet mignon tail jerky turkey. Fatback
+            tongue venison beef ham pork loin meatball ground round. Turkey ground round pastrami, swine
+            strip steak tri-tip pork belly.</p>
+
+        <p>Jowl short loin filet mignon porchetta pork chop turducken, ham bacon spare ribs pig shank
+            biltong venison. Ground round sirloin prosciutto, ribeye rump frankfurter hamburger. Short loin
+            meatball pork belly boudin tail pork pig andouille shankle beef ribs short ribs pastrami cow
+            salami. Andouille kielbasa bacon salami porchetta fatback tail bresaola swine meatloaf.
+            Porchetta beef ribs short ribs beef biltong.</p>
+
+        <p>Strip steak landjaeger turducken doner short ribs tail. Pig bresaola sausage drumstick venison
+            ribeye short ribs meatball ham hock cow pork loin shankle ham short loin kevin. Ham sirloin ham
+            hock rump tongue prosciutto swine shoulder drumstick leberkas tail meatball ball tip venison.
+            Pastrami filet mignon flank, brisket tongue swine tail venison shank pancetta ham hock ball tip
+            tenderloin. Drumstick shankle short ribs turkey, landjaeger meatloaf chicken salami rump
+            shoulder. Bacon venison rump, sirloin sausage leberkas pastrami.</p>
+
+    </div>
+</div>
+<div section="day" class="section container-fluid">
+    <div class="content">
+        <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
+
+        <h4>10 / 18 / 2014</h4>
+
+        <p>Since San Francisco offers such a fun array of activities and we have called this home for the
+            past few years we are looking forward to celebrating our wedding weekend in a unique part of the
+            city. With breathtaking views, rich historical presence, and convenient location for exploring
+            the Bay Area, the <a href="http://www.nps.gov/prsf/index.htm">Presidio</a> offers a romantic
+            escape from the city. The wedding events will be held within the park, starting with an out of
+            town guest social on the grounds of the <a href="http://www.innatthepresidio.com/index.php">Inn
+                at the Presidio</a> on Friday evening.</p>
+
+        <p>Saturday’s events will begin with an afternoon ceremony held at the <a
+                href="http://www.presidio.gov/venues/Pages/Chapel-of-Our-Lady.aspx">Chapel of Our Lady</a>
+            with the cocktail hour and reception immediately following just down the path at the <a
+                    href="http://www.sffilmcentre.com/eventspace/eventspace.html">SF Film Center</a> in the
+            Presidio.</p>
+
+        <p>Hotels: We are still working on gathering room blocks at various hotels around the area and will
+            post as soon as we have solidified. Please note the week of October 18th, there are a few very
+            large events being hosted in San Francisco so hotel rooms will be limited, we recommend booking
+            well in advance.</p>
+    </div>
+</div>
+<div section="cast" class="section container-fluid">
+<div class="content">
+    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
+
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/alli_v01.jpg">
             </div>
-            <div section="day" class="section container-fluid">
-                <div class="content">
-                    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-                    <div class="separator">
-                        <h4>10/18/2014</h4>
-                        <p>Since San Francisco offers such a fun array of activities and we have called this home for the past few years we are looking forward to celebrating our wedding weekend in a unique part of the city. With breathtaking views, rich historical presence, and convenient location for exploring the Bay Area, the <a href="http://www.nps.gov/prsf/index.htm">Presidio</a> offers a romantic escape from the city. The wedding events will be held within the park, starting with an out of town guest social on the grounds of the <a href="http://www.innatthepresidio.com/index.php">Inn at the Presidio</a> on Friday evening.</p>
-                        <p>Saturday’s events will begin with an afternoon ceremony held at the <a href="http://www.presidio.gov/venues/Pages/Chapel-of-Our-Lady.aspx">Chapel of Our Lady</a> with the cocktail hour and reception immediately following just down the path at the <a href="http://www.sffilmcentre.com/eventspace/eventspace.html">SF Film Center</a> in the Presidio.</p>
-                        <p>Hotels: We are still working on gathering room blocks at various hotels around the area and will post as soon as we have solidified. Please note the week of October 18th, there are a few very large events being hosted in San Francisco so hotel rooms will be limited, we recommend booking well in advance.</p>
-                    </div>
-                </div>
-            </div>
-            <div section="cast" class="section container-fluid">
-                <div class="content">
-                    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/alli_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Alli Wick <span>Maid of Honor</span></h4>
-                                <p>Alison first met Alli Wick Freshman year of high school in Granite Bay, CA. If having the same name wasn’t destin enough to be lifelong best friends, they were wearing the exact same outfit on the day they met! They have been there for eachother every step of the way, weather it was dealing with parents battling cancer, pining over Justin Timberlake, visits to Spokane, laughing and crying over heartbreaks, halloween celebrations, and wine night hot tub chats, Alison can always count on Alli to be there for her. Alli is truly the most thoughtful, fun, caring, dedicated, and cherished best friend a girl could ask for. Alli is currently living in Roseville, CA where she is a dedicated tri-athlete, fantastic caregiver, and studying to be a personal trainer. Alison feels truly blessed to have her lifelong best friend Alli as her maid of honor on her special day.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/kelly_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Kelly McGonigal <span>Bridesmaid</span></h4>
-                                <p>Alison met Kelly as a freshman in high school but didn’t become close friends with her until after getting involved in student government Junior year. Kelly is the go-to laugh girl, from downing meatball sandwiches in the back of Mr. Westburg’s classroom or trying on velvet one piece jumpsuits, Alison can always count on Kelly for a hysterical night! Kelly has recently moved to San Francisco from Boston to be closer to family and friends. She is currently making a splash in the dental sales world as a top performing Digital Technology Specialist. Kelly is truly the heartbeat around a great night out, a glass of wine in, or a cafe gab session; be on the look out for her on the dance floor!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/vineetha_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Vineetha Pathrose <span>Bridesmaid</span></h4>
-                                <p>Kellen and Alison became friends with Vineetha just a few years ago here in San Francisco. Vineetha, a Texas native, moved to San Francisco to start a new adventure with her current PR firm Edelman back in 2011. Vineetha was quickly adopted into the Edelman friend circle as she joined the Texan cheering section of the 2011 World Series watch parties. Alison and Vineetha instantly became friends; weather it was Saturday college football bar days, planning Sunday family dinners, or nights out on the town Vineetha’s contagious laugh and texas hospitality are sure to be there. Kellen and Alison couldn’t be more excited to see where Vineetha’s adventures take her next - crossing their fingers that they have another friend to visit in London soon!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/grace_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Grace Wallace <span>Bridesmaid</span></h4>
-                                <p>Grace and Alison have been great friends for almost 10 years! They instantly connected while participating on a Gonzaga pre-orientation camping/river rafting trip in Montana. They quickly became teammates, drinking mates, housemates, and most importantly, inseparable friends. Grace helped Kellen and Alison transition to San Francisco by always opening her home for frequent visits, weekend stays, and great parties! Grace is constantly helping Kellen and Alison explore this amazing city by introducing them to all sorts of new adventures. Grace is one of the most beautiful people they know both inside and out; her heart for others, dedicated friendships, and true adventurous spirit are contagious.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/nick_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Nicholas Deccio <span>Best Man</span></h4>
-                                <p>Kellen and Nick have been friends since 8th grade where they met in Spokane at University High School Summer football practice. In high school Kellen and Nick spent time together hanging out at lake Coeur d’ Alene, evading police after long nights of underage drinking, and helping eachother through tough family times. Kellen chose Nick to be his best man because he can count on him to be there anytime of the day for any reason; Nick is truly a man who would give you the shirt off his back. Kellen and Alison are excited to see Nick on a new adventure in St, Louis Mo where he recently moved with his fiancee Adelina.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/greg_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Greg Babel <span>Groomsmen</span></h4>
-                                <p>Kellen first met Greg in Roncalli at Gonzaga University as they lived down the hall from one another. A long lasting friendship was born after losing in a dorm rivalry flag football game and discovering that they were the only two that seemed to be angry! They share a love of music (although not always aligned), video games, and craft beers. Greg is currently living in London town working towards his second post graduate degree graduating with his MBA from London School Economics in Spring of 2015.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/jarod_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Jarod Field <span>Groomsmen</span></h4>
-                                <p>Jarod and Kellen’s friendship started back at GU during Jarod’s “2nd” Senior year shenanigans. Their friendship grew after Kellen introduced Jarod to Alison during the Cambridge wedding weekend celebration. Initially, Alison’s first thoughts were, “Who is your creepy friend Jarod, not a fan”. But a short 4 years later, a few trips to Vegas, many dance floors and stripper poles, fashion advice conversations, and trips around the world together, Kellen had to fight Alison to keep Jarod on his side of the bridal party. Jarod is the life of the party, an amazing listening ear, and one of the best friends we could ask for. We couldn’t be more excited to have Jarod share this special day with us as he is truly an extended member of our family.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/justin_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Justin Meeks <span>Groomsmen</span></h4>
-                                <p>Like Greg, Kellen met Justin as a freshman at Gonzaga University as dorm-mates in Roncalli hall. They quickly became friends as they realized their love of super smash brothers and winter activities! Kellen and Justin ended up living together the rest of their time at GU afterwhich Justin joined the Peace Corps and spent time in Mali Africa helping to engineer a sustainable water filtration system. Justin met his fiancee, Caitlin while in the Corps and they are celebrating their wedding just a few weeks before Kellen and Alison in Kentucky.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/harper_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Harper Guzenski <span>Flower Girl</span></h4>
-                                <p>Kellen and Alison’s niece, Harper Jo Guzenski, blessed Andy and Leah Guzenski in June of 2012 and has been bringing the family smiles and giggles ever since. While Harper has most recently been learning her ABC’s, counting to 13, and signing over 50 different signs; she has also taken to spending time telling stories, singing songs, snuggling with her favorite furry friend Harlo, and facetiming with her family afar. Alison had the honor of becoming Harper’s Godmother in November of 2012 and takes every chance she can get to spend time with her. Kellen and Alison occasionally get down to visit San Diego where Andy and Leah currently live. While it was unplanned, October 18th has brought luck, love, and happiness to Andy and Leah; they couldn’t feel more blessed to be sharing our anniversary with them for a lifetime to come.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator">
-                        <div class="row">
-                            <div class="col-xs-4 col-md-3">
-                                <img class="img-responsive" src="/static/images/andrew_v01.jpg">
-                            </div>
-                            <div class="col-xs-8 col-xs-9">
-                                <h4>Andrew Cambridge <span>Ring Bearer</span></h4>
-                                <p>Kellen and Alison’s Godson Andrew is the son of their great friends Chris and Catie Cambridge. Kellen first met Chris their Freshman year at Gonzaga University and along with most of the other wedding party has been in all sorts of trouble over the past 9 years! While Chris and Kellen’s friendship grew so did Catie and Alison’s as they had a few classes together  their Sophomore and Junior year. Chris and Catie fell in love and were married in Spokane soon after graduation. The Cambridge family now lives in Tigrid OR where Catie completed law school, and has most recently been raising their adorable son, Andrew. Chris is currently a Foundry Engineer and has taken well to being an amazing father! They are expecting a baby girl to join their family this June.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div section="city" class="section container-fluid">
-                <div class="content">
-                    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-                    <div class="separator">
-                        <h4>San Francisco</h4>
-                        <p>For those of you that might enjoy a bit of sightseeing while you are here in San Francisco please see a few ideas of fun things to see while you are here. Please note the week of October 18th, there are a few very large events being hosted in San Francisco so hotel rooms will be limited, we recommend booking well in advance. Please see a great guide to the city <a href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1845537,00.html">here</a>! A few of our favorites are listed below.</p>
-                        <p>An <a href="http://www.alcatrazcruises.com/">amazing tour</a> of the historical state prison. Make sure to book tickets in advance as the tour sells out in advance.</p>
-                    </div>
-                    <div class="separator">
-                        <h4>Precidio</h4>
-                        <p>Spend some time getting to know one of the most beautiful <a href="http://www.nps.gov/prsf/index.htm">National Parks in the nation</a>. There are many self guided tours and wonderful bike/walking paths to explore.</p>
-                    </div>
-                    <div class="separator">
-                        <h4>North Beach/ Pier 39</h4>
-                        <p>Where we call home, we have lived in the <a href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1844984,00.html">North Beach neighborhood</a> since moving to SF in 2011. We live right at the base of beautiful <a href="http://sfrecpark.org/destination/telegraph-hill-pioneer-park/coit-tower/">Coit Tower</a> and up the hill from <a href="http://www.sspeterpaulsf.org/church/">Saint’s Peter and Paul church</a>. If you are up for a delicious breakfast head to Mama’s- you will be sure to wait but said to had the best breakfast in town. While in the area make sure to check out Fisherman’s Wharf on pier 39 to take a look at the sea lions, beautiful views, aquatic park, and that’s about it! Don’t spend too much time here as it truly is a tourist trap!</p>
-                    </div>
-                </div>
-            </div>
-            <div section="pics" class="section container-fluid">
-                <div class="content">
-                    <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-                    <p></p>
-                </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Alli Wick <span>Maid of Honor</span></h4>
+
+                <p>Alison first met Alli Wick Freshman year of high school in Granite Bay, CA. If having the
+                    same name wasn’t destin enough to be lifelong best friends, they were wearing the exact
+                    same outfit on the day they met! They have been there for eachother every step of the
+                    way, weather it was dealing with parents battling cancer, pining over Justin Timberlake,
+                    visits to Spokane, laughing and crying over heartbreaks, halloween celebrations, and
+                    wine night hot tub chats, Alison can always count on Alli to be there for her. Alli is
+                    truly the most thoughtful, fun, caring, dedicated, and cherished best friend a girl
+                    could ask for. Alli is currently living in Roseville, CA where she is a dedicated
+                    tri-athlete, fantastic caregiver, and studying to be a personal trainer. Alison feels
+                    truly blessed to have her lifelong best friend Alli as her maid of honor on her special
+                    day.</p>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-    <script src="/static/scripts/main.js"></script>
-    <!--[if IE]><script>window.location="http://browsehappy.com/"</script><![endif]-->
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/kelly_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Kelly McGonigal <span>Bridesmaid</span></h4>
+
+                <p>Alison met Kelly as a freshman in high school but didn’t become close friends with her
+                    until after getting involved in student government Junior year. Kelly is the go-to laugh
+                    girl, from downing meatball sandwiches in the back of Mr. Westburg’s classroom or trying
+                    on velvet one piece jumpsuits, Alison can always count on Kelly for a hysterical night!
+                    Kelly has recently moved to San Francisco from Boston to be closer to family and
+                    friends. She is currently making a splash in the dental sales world as a top performing
+                    Digital Technology Specialist. Kelly is truly the heartbeat around a great night out, a
+                    glass of wine in, or a cafe gab session; be on the look out for her on the dance
+                    floor!</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/vineetha_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Vineetha Pathrose <span>Bridesmaid</span></h4>
+
+                <p>Kellen and Alison became friends with Vineetha just a few years ago here in San
+                    Francisco. Vineetha, a Texas native, moved to San Francisco to start a new adventure
+                    with her current PR firm Edelman back in 2011. Vineetha was quickly adopted into the
+                    Edelman friend circle as she joined the Texan cheering section of the 2011 World Series
+                    watch parties. Alison and Vineetha instantly became friends; weather it was Saturday
+                    college football bar days, planning Sunday family dinners, or nights out on the town
+                    Vineetha’s contagious laugh and texas hospitality are sure to be there. Kellen and
+                    Alison couldn’t be more excited to see where Vineetha’s adventures take her next -
+                    crossing their fingers that they have another friend to visit in London soon!</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/grace_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Grace Wallace <span>Bridesmaid</span></h4>
+
+                <p>Grace and Alison have been great friends for almost 10 years! They instantly connected
+                    while participating on a Gonzaga pre-orientation camping/river rafting trip in Montana.
+                    They quickly became teammates, drinking mates, housemates, and most importantly,
+                    inseparable friends. Grace helped Kellen and Alison transition to San Francisco by
+                    always opening her home for frequent visits, weekend stays, and great parties! Grace is
+                    constantly helping Kellen and Alison explore this amazing city by introducing them to
+                    all sorts of new adventures. Grace is one of the most beautiful people they know both
+                    inside and out; her heart for others, dedicated friendships, and true adventurous spirit
+                    are contagious.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/nick_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Nicholas Deccio <span>Best Man</span></h4>
+
+                <p>Kellen and Nick have been friends since 8th grade where they met in Spokane at University
+                    High School Summer football practice. In high school Kellen and Nick spent time together
+                    hanging out at lake Coeur d’ Alene, evading police after long nights of underage
+                    drinking, and helping eachother through tough family times. Kellen chose Nick to be his
+                    best man because he can count on him to be there anytime of the day for any reason; Nick
+                    is truly a man who would give you the shirt off his back. Kellen and Alison are excited
+                    to see Nick on a new adventure in St, Louis Mo where he recently moved with his fiancee
+                    Adelina.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/greg_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Greg Babel <span>Groomsmen</span></h4>
+
+                <p>Kellen first met Greg in Roncalli at Gonzaga University as they lived down the hall from
+                    one another. A long lasting friendship was born after losing in a dorm rivalry flag
+                    football game and discovering that they were the only two that seemed to be angry! They
+                    share a love of music (although not always aligned), video games, and craft beers. Greg
+                    is currently living in London town working towards his second post graduate degree
+                    graduating with his MBA from London School Economics in Spring of 2015.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/jarod_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Jarod Field <span>Groomsmen</span></h4>
+
+                <p>Jarod and Kellen’s friendship started back at GU during Jarod’s “2nd” Senior year
+                    shenanigans. Their friendship grew after Kellen introduced Jarod to Alison during the
+                    Cambridge wedding weekend celebration. Initially, Alison’s first thoughts were, “Who is
+                    your creepy friend Jarod, not a fan”. But a short 4 years later, a few trips to Vegas,
+                    many dance floors and stripper poles, fashion advice conversations, and trips around the
+                    world together, Kellen had to fight Alison to keep Jarod on his side of the bridal
+                    party. Jarod is the life of the party, an amazing listening ear, and one of the best
+                    friends we could ask for. We couldn’t be more excited to have Jarod share this special
+                    day with us as he is truly an extended member of our family.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/justin_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Justin Meeks <span>Groomsmen</span></h4>
+
+                <p>Like Greg, Kellen met Justin as a freshman at Gonzaga University as dorm-mates in
+                    Roncalli hall. They quickly became friends as they realized their love of super smash
+                    brothers and winter activities! Kellen and Justin ended up living together the rest of
+                    their time at GU afterwhich Justin joined the Peace Corps and spent time in Mali Africa
+                    helping to engineer a sustainable water filtration system. Justin met his fiancee,
+                    Caitlin while in the Corps and they are celebrating their wedding just a few weeks
+                    before Kellen and Alison in Kentucky.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/harper_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Harper Guzenski <span>Flower Girl</span></h4>
+
+                <p>Kellen and Alison’s niece, Harper Jo Guzenski, blessed Andy and Leah Guzenski in June of
+                    2012 and has been bringing the family smiles and giggles ever since. While Harper has
+                    most recently been learning her ABC’s, counting to 13, and signing over 50 different
+                    signs; she has also taken to spending time telling stories, singing songs, snuggling
+                    with her favorite furry friend Harlo, and facetiming with her family afar. Alison had
+                    the honor of becoming Harper’s Godmother in November of 2012 and takes every chance she
+                    can get to spend time with her. Kellen and Alison occasionally get down to visit San
+                    Diego where Andy and Leah currently live. While it was unplanned, October 18th has
+                    brought luck, love, and happiness to Andy and Leah; they couldn’t feel more blessed to
+                    be sharing our anniversary with them for a lifetime to come.</p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <img class="img-responsive" src="/static/images/andrew_v01.jpg">
+            </div>
+            <div class="col-xs-8 col-md-9">
+                <h4>Andrew Cambridge <span>Ring Bearer</span></h4>
+
+                <p>Kellen and Alison’s Godson Andrew is the son of their great friends Chris and Catie
+                    Cambridge. Kellen first met Chris their Freshman year at Gonzaga University and along
+                    with most of the other wedding party has been in all sorts of trouble over the past 9
+                    years! While Chris and Kellen’s friendship grew so did Catie and Alison’s as they had a
+                    few classes together their Sophomore and Junior year. Chris and Catie fell in love and
+                    were married in Spokane soon after graduation. The Cambridge family now lives in Tigrid
+                    OR where Catie completed law school, and has most recently been raising their adorable
+                    son, Andrew. Chris is currently a Foundry Engineer and has taken well to being an
+                    amazing father! They are expecting a baby girl to join their family this June.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div section="city" class="section container-fluid">
+    <div class="content">
+        <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
+
+        <div class="separator">
+            <h4>San Francisco</h4>
+
+            <p>For those of you that might enjoy a bit of sightseeing while you are here in San Francisco please
+                see a few ideas of fun things to see while you are here. Please note the week of October 18th,
+                there are a few very large events being hosted in San Francisco so hotel rooms will be limited,
+                we recommend booking well in advance. Please see a great guide to the city <a
+                        href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1845537,00.html">here</a>!
+                A few of our favorites are listed below.</p>
+
+            <p>An <a href="http://www.alcatrazcruises.com/">amazing tour</a> of the historical state prison.
+                Make sure to book tickets in advance as the tour sells out in advance.</p>
+        </div>
+        <div class="separator">
+            <h4>Precidio</h4>
+
+            <p>Spend some time getting to know one of the most beautiful <a
+                    href="http://www.nps.gov/prsf/index.htm">National Parks in the nation</a>. There are many
+                self guided tours and wonderful bike/walking paths to explore.</p>
+        </div>
+        <div class="separator">
+            <h4>North Beach/ Pier 39</h4>
+
+            <p>Where we call home, we have lived in the <a
+                    href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1844984,00.html">North
+                Beach neighborhood</a> since moving to SF in 2011. We live right at the base of beautiful <a
+                    href="http://sfrecpark.org/destination/telegraph-hill-pioneer-park/coit-tower/">Coit
+                Tower</a> and up the hill from <a href="http://www.sspeterpaulsf.org/church/">Saint’s Peter and
+                Paul church</a>. If you are up for a delicious breakfast head to Mama’s- you will be sure to
+                wait but said to had the best breakfast in town. While in the area make sure to check out
+                Fisherman’s Wharf on pier 39 to take a look at the sea lions, beautiful views, aquatic park, and
+                that’s about it! Don’t spend too much time here as it truly is a tourist trap!</p>
+        </div>
+    </div>
+</div>
+<div section="pics" class="section container-fluid">
+    <div class="content">
+        <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
+
+        <p></p>
+    </div>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="/static/scripts/main.js"></script>
+<!--[if IE]><script>window.location="http://browsehappy.com/"</script><![endif]-->
 </body>
 </html>

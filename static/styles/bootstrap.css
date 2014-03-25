@@ -1,10 +1,11 @@
+.container-fluid {
+  padding: 0; }
+
+.row {
+  width: 100%; }
+
 html,
 body {
-  height: 100%; }
-
-body {
-  display: flex;
-  flex-direction: column;
   height: 100%; }
 
 h4 {
@@ -17,13 +18,15 @@ p {
   font-size: 16px;
   line-height: 27px; }
 
+.window {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
 .separator {
   margin: 25px 0; }
 
 .close-btn {
-  position: fixed;
-  top: 25px;
-  right: 25px;
   font-size: 25px;
   cursor: pointer;
   color: rgba(198, 36, 77, 0.6);
@@ -90,10 +93,10 @@ p {
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
-  margin: 25px;
-  padding: 25px;
-  -webkit-transition: 1.25s ease;
-  transition: 1.25s ease;
+  margin: 15px;
+  padding: 15px;
+  -webkit-transition: all 1.25s ease;
+  transition: all 1.25s ease;
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%); }
   .selected .content {

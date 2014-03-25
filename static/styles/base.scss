@@ -1,5 +1,3 @@
-@import "mixins";
-
 // globals
 html,
 body {
@@ -17,18 +15,18 @@ h4 {
 
 p {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 // shared
-.separator {
-        margin: 25px 0;
-}
-
-.main {
+.window {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.separator {
+    margin: 25px 0;
 }
 
 .close-btn {
@@ -44,11 +42,11 @@ p {
 
 // top navigation
 .nav {
+    width: 100%;
     z-index: 1;
     background-color: hsl(0, 0%, 0%);
 
     a {
-        display: inline-block;
         line-height: 56px;
         font-size: 28px;
         text-decoration: none;
@@ -103,7 +101,7 @@ p {
 
     @for $i from 1 through 5 {
         &:nth-of-type(#{$i}) {
-            background-image: url("/static/images/bg#{$i}_v01.jpg");
+            background-image: url('/static/images/bg#{$i}_v01.jpg');
         }
     }
 
@@ -121,10 +119,9 @@ p {
     overflow: auto;
     background-color: hsla(0, 100%, 100%, .75);
     border-radius: 15px;
-    margin: 25px;
-    padding: 25px;
-
-    @include transition(1.25s ease);
+    margin: 15px;
+    padding: 15px;
+    @include transition(all 1.25s ease);
     @include transform(translateY(-300%));
 
     .selected & {

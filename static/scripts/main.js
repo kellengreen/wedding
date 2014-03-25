@@ -10,6 +10,7 @@ app.directive('section', function () {
     return {
         restrict: 'A',
         link: function (scope, elem, attrs) {
+            console.log(document.body.offsetHeight);
             var section = attrs.section;
 
             elem.on('click', function(evt) {
@@ -19,16 +20,15 @@ app.directive('section', function () {
                 });
             });
 
-            if (section) {
-                scope.$watch(function(scope) {
-                    var style = 'selected';
-                    if (scope.section === section) {
-                        elem.addClass(style);
-                    } else {
-                        elem.removeClass(style);
-                    }
-                });
-            }
+            scope.$watch(function(scope) {
+                var selected = 'selected';
+                if (scope.section === section) {
+                    elem.addClass(selected);
+                    //elem.scrollTop = 0;
+                } else {
+                    elem.removeClass(selected);
+                }
+            });
         }
     }
 });
