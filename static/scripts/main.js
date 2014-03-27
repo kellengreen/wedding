@@ -1,16 +1,16 @@
 console.info('Go Gonzaga G.O.N.Z.A.G.A!');
 
 (function() {
-    var shortcuts = {};
+    var s = {};
 
-    shortcuts.asArray = function(object) {
+    s.asArray = function(object) {
         for (var array = [], key = 0, value; value = object[key]; ++key) {
             array.push(value);
         }
         return array;
     };
 
-    window.shortcuts = shortcuts;
+    window.shortcuts = s;
 })();
 
 document.addEventListener('DOMContentLoaded', function() {

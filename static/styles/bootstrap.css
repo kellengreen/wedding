@@ -17,8 +17,10 @@ p {
   flex-direction: column;
   height: 100%; }
 
-.separator {
-  margin: 25px 0; }
+.row-spacing .row {
+  margin-bottom: 20px; }
+  .row-spacing .row:last-of-type {
+    margin-bottom: 0px; }
 
 .close-btn {
   font-size: 25px;
@@ -39,10 +41,10 @@ p {
     text-decoration: none;
     color: white;
     margin: 0 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+    transition: 0.25s; }
     .nav a:hover, .nav a.selected {
-      -webkit-transition: 0.25s;
-      transition: 0.25s;
       color: #448cca;
       text-decoration: none; }
   .nav a:nth-of-type(1) {
@@ -63,9 +65,9 @@ p {
 .section {
   display: flex;
   padding: 15px;
+  flex-basis: 20%;
   flex-wrap: nowrap;
   flex-direction: column;
-  flex-basis: 20%;
   background-position: 50% 50%;
   background-size: cover;
   -webkit-transition: 0.75s;
@@ -81,11 +83,12 @@ p {
   .section:nth-of-type(5) {
     background-image: url("/static/images/bg5_v01.jpg"); }
   .active .section {
-    flex-basis: 5%; }
+    flex-basis: 5% !important; }
     .active .section.selected {
-      flex-basis: 80%; }
+      flex-basis: 80% !important; }
 
 .content {
+  width: 100%;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
