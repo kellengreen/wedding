@@ -10,10 +10,18 @@ console.info('Go Gonzaga G.O.N.Z.A.G.A!');
         return array;
     };
 
+    s.ready = function(func) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('readystatechange', func);
+        } else {
+            func();
+        }
+    }
+
     window.shortcuts = s;
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
+shortcuts.ready(function() {
     var selectedSection,
         sectionAttr = 'section',
         selectedClass = 'selected',
