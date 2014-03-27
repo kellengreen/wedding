@@ -1,34 +1,49 @@
 console.info('Go Gonzaga G.O.N.Z.A.G.A!');
 
-var app = angular.module('weddingApp', []);
+(function() {
+    var shortcuts = {};
 
-app.controller('weddingCtrl', function ($scope) {
-    $scope.section;
-});
+    shortcuts.asArray = function(object) {
+        for (var array = [], key = 0, value; value = object[key]; ++key) {
+            array.push(value);
+        }
+        return array;
+    };
 
-app.directive('section', function () {
-    return {
-        restrict: 'A',
-        link: function (scope, elem, attrs) {
-            console.log(document.body.offsetHeight);
-            var section = attrs.section;
+    window.shortcuts = shortcuts;
+})();
 
-            elem.on('click', function(evt) {
-                evt.cancelBubble = true;
-                scope.$apply(function() {
-                    scope.section = section;
-                });
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    var selectedSection,
+        sectionAttr = 'section',
+        selectedClass = 'selected',
+        activeClass = 'active',
+        sectionElems = shortcuts.asArray(document.querySelectorAll('[' + sectionAttr + ']')),
+        sectionsContainer = document.querySelector('.' + sectionAttr + 's');
 
-            scope.$watch(function(scope) {
-                var selected = 'selected';
-                if (scope.section === section) {
-                    elem.addClass(selected);
-                    //elem.scrollTop = 0;
-                } else {
-                    elem.removeClass(selected);
+    sectionElems.forEach(function(sectionElem) {
+        sectionElem.addEventListener('click', function(evt) {
+            evt.cancelBubble = true;
+            selectedSection = sectionElem.getAttribute(sectionAttr);
+
+            // sections container
+            if (selectedSection) {
+                sectionsContainer.classList.add(activeClass);
+            } else {
+                sectionsContainer.classList.remove(activeClass);
+            }
+
+            // section elements
+            sectionElems.forEach(function(sectionElem) {
+                var sectionValue = sectionElem.getAttribute(sectionAttr);
+                if (sectionValue) {
+                    if (selectedSection === sectionValue) {
+                        sectionElem.classList.add(selectedClass);
+                    } else {
+                        sectionElem.classList.remove(selectedClass);
+                    }
                 }
             });
-        }
-    }
+        });
+    });
 });

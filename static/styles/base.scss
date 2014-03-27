@@ -92,6 +92,8 @@ p {
 // individual sections
 .section {
     display: flex;
+    padding: 15px;
+    flex-wrap: nowrap;
     flex-direction: column;
     flex-basis: 20%;
     background-position: 50% 50%;
@@ -107,24 +109,23 @@ p {
 
     .active & {
         flex-basis: 5%;
-    }
 
-    &.selected {
-        flex-basis: 80%;
+        &.selected {
+            flex-basis: 80%;
+        }
     }
 }
 
 // section content
 .content {
     overflow: auto;
-    background-color: hsla(0, 100%, 100%, .75);
+    background-color: hsla(0, 0%, 100%, .75);
     border-radius: 15px;
-    margin: 15px;
     padding: 15px;
-    @include transition(1.25s);
+    @include transition(1.75s);
     @include transform(translateY(-300%));
 
     .selected & {
-        @include transform(translateY(0));
+        @include transform(none);
     }
 }

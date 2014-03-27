@@ -1,21 +1,21 @@
 <!DOCTYPE HTML>
-<html ng-app="weddingApp">
+<html>
 <head>
     <title>ZagWedding</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
           href="http://fonts.googleapis.com/css?family=Sail|Montez|The+Girl+Next+Door|Finger+Paint|Nothing+You+Could+Do|Sue+Ellen+Francisco">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/styles/bootstrap.css">
     <link rel="icon" href="/static/images/favicon152_v01.png">
     <link rel="apple-touch-icon-precomposed" href="/static/images/favicon152_v01.png">
 </head>
-<body ng-controller="weddingCtrl">
+<body>
 <div class="window">
 <div class="nav container-fluid">
     <div class="row">
-        <div class="hidden-xs hidden-sm col-md-12">
+        <div class="hidden-xs col-sm-12">
             <a section="couple">The Couple</a>
             <a section="day">The Big Day</a>
             <a section="cast">The Supporting Cast</a>
@@ -24,8 +24,8 @@
         </div>
     </div>
 </div>
-<div class="sections" ng-class="{active: section}">
-<div section="couple" class="section container-fluid">
+<div class="sections">
+<div section="couple" class="section container-fluid init">
     <div class="content">
         <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
         <h4>Kellen and Alison</h4>
@@ -68,14 +68,14 @@
         <p>Since San Francisco offers such a fun array of activities and we have called this home for the
             past few years we are looking forward to celebrating our wedding weekend in a unique part of the
             city. With breathtaking views, rich historical presence, and convenient location for exploring
-            the Bay Area, the <a href="http://www.nps.gov/prsf/index.htm">Presidio</a> offers a romantic
+            the Bay Area, the <a target="_blank" href="http://www.nps.gov/prsf/index.htm">Presidio</a> offers a romantic
             escape from the city. The wedding events will be held within the park, starting with an out of
-            town guest social on the grounds of the <a href="http://www.innatthepresidio.com/index.php">Inn
+            town guest social on the grounds of the <a target="_blank" href="http://www.innatthepresidio.com/index.php">Inn
                 at the Presidio</a> on Friday evening.</p>
 
-        <p>Saturday’s events will begin with an afternoon ceremony held at the <a
+        <p>Saturday’s events will begin with an afternoon ceremony held at the <a target="_blank"
                 href="http://www.presidio.gov/venues/Pages/Chapel-of-Our-Lady.aspx">Chapel of Our Lady</a>
-            with the cocktail hour and reception immediately following just down the path at the <a
+            with the cocktail hour and reception immediately following just down the path at the <a target="_blank"
                     href="http://www.sffilmcentre.com/eventspace/eventspace.html">SF Film Center</a> in the
             Presidio.</p>
 
@@ -91,10 +91,10 @@
 
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/alli_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Alli Wick <span>Maid of Honor</span></h4>
 
                 <p>Alison first met Alli Wick Freshman year of high school in Granite Bay, CA. If having the
@@ -113,10 +113,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/kelly_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Kelly McGonigal <span>Bridesmaid</span></h4>
 
                 <p>Alison met Kelly as a freshman in high school but didn’t become close friends with her
@@ -133,10 +133,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/vineetha_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Vineetha Pathrose <span>Bridesmaid</span></h4>
 
                 <p>Kellen and Alison became friends with Vineetha just a few years ago here in San
@@ -153,10 +153,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/grace_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Grace Wallace <span>Bridesmaid</span></h4>
 
                 <p>Grace and Alison have been great friends for almost 10 years! They instantly connected
@@ -173,10 +173,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/nick_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Nicholas Deccio <span>Best Man</span></h4>
 
                 <p>Kellen and Nick have been friends since 8th grade where they met in Spokane at University
@@ -192,10 +192,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/greg_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Greg Babel <span>Groomsmen</span></h4>
 
                 <p>Kellen first met Greg in Roncalli at Gonzaga University as they lived down the hall from
@@ -209,10 +209,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/jarod_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Jarod Field <span>Groomsmen</span></h4>
 
                 <p>Jarod and Kellen’s friendship started back at GU during Jarod’s “2nd” Senior year
@@ -229,10 +229,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/justin_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Justin Meeks <span>Groomsmen</span></h4>
 
                 <p>Like Greg, Kellen met Justin as a freshman at Gonzaga University as dorm-mates in
@@ -247,10 +247,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/harper_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Harper Guzenski <span>Flower Girl</span></h4>
 
                 <p>Kellen and Alison’s niece, Harper Jo Guzenski, blessed Andy and Leah Guzenski in June of
@@ -268,10 +268,10 @@
     </div>
     <div class="separator">
         <div class="row">
-            <div class="col-xs-4 col-md-3">
+            <div class="col-xs-12 col-sm-4 col-lg-3">
                 <img class="img-responsive" src="/static/images/andrew_v01.jpg">
             </div>
-            <div class="col-xs-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
                 <h4>Andrew Cambridge <span>Ring Bearer</span></h4>
 
                 <p>Kellen and Alison’s Godson Andrew is the son of their great friends Chris and Catie
@@ -298,28 +298,28 @@
             <p>For those of you that might enjoy a bit of sightseeing while you are here in San Francisco please
                 see a few ideas of fun things to see while you are here. Please note the week of October 18th,
                 there are a few very large events being hosted in San Francisco so hotel rooms will be limited,
-                we recommend booking well in advance. Please see a great guide to the city <a
+                we recommend booking well in advance. Please see a great guide to the city <a target="_blank"
                         href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1845537,00.html">here</a>!
                 A few of our favorites are listed below.</p>
 
-            <p>An <a href="http://www.alcatrazcruises.com/">amazing tour</a> of the historical state prison.
+            <p>An <a target="_blank" href="http://www.alcatrazcruises.com/">amazing tour</a> of the historical state prison.
                 Make sure to book tickets in advance as the tour sells out in advance.</p>
         </div>
         <div class="separator">
             <h4>Precidio</h4>
 
-            <p>Spend some time getting to know one of the most beautiful <a
+            <p>Spend some time getting to know one of the most beautiful <a target="_blank"
                     href="http://www.nps.gov/prsf/index.htm">National Parks in the nation</a>. There are many
                 self guided tours and wonderful bike/walking paths to explore.</p>
         </div>
         <div class="separator">
             <h4>North Beach/ Pier 39</h4>
 
-            <p>Where we call home, we have lived in the <a
+            <p>Where we call home, we have lived in the <a target="_blank"
                     href="http://content.time.com/time/travel/cityguide/article/0,31489,1845230_1845056_1844984,00.html">North
-                Beach neighborhood</a> since moving to SF in 2011. We live right at the base of beautiful <a
+                Beach neighborhood</a> since moving to SF in 2011. We live right at the base of beautiful <a target="_blank"
                     href="http://sfrecpark.org/destination/telegraph-hill-pioneer-park/coit-tower/">Coit
-                Tower</a> and up the hill from <a href="http://www.sspeterpaulsf.org/church/">Saint’s Peter and
+                Tower</a> and up the hill from <a target="_blank" href="http://www.sspeterpaulsf.org/church/">Saint’s Peter and
                 Paul church</a>. If you are up for a delicious breakfast head to Mama’s- you will be sure to
                 wait but said to had the best breakfast in town. While in the area make sure to check out
                 Fisherman’s Wharf on pier 39 to take a look at the sea lions, beautiful views, aquatic park, and
@@ -330,14 +330,12 @@
 <div section="pics" class="section container-fluid">
     <div class="content">
         <span section class="close-btn pull-right glyphicon glyphicon-remove-circle"></span>
-
         <p></p>
     </div>
 </div>
 </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="/static/scripts/main.js"></script>
-<!--[if IE]><script>window.location="http://browsehappy.com/"</script><![endif]-->
+<!--[if IE]><script>document.body.innerHTML='<h1 class="text-center">Gonzaga had a football team when this browser came out, time to <a target="_blank" href="https://www.google.com/chrome/">upgrade</a>!</h1>'</script><![endif]-->
 </body>
 </html>
