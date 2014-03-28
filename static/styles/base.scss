@@ -20,9 +20,9 @@ p {
 
 // shared
 .window {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    @include display-flex;
+    @include flex-direction(column);
 }
 
 .row-spacing {
@@ -91,19 +91,19 @@ p {
 
 // sections container
 .sections {
-    display: flex;
     height: 100%;
+    @include display-flex;
 }
 
 // individual sections
 .section {
-    display: flex;
     padding: 15px;
-    flex-basis: 20%;
-    flex-wrap: nowrap;
-    flex-direction: column;
     background-position: 50% 50%;
     background-size: cover;
+
+    @include display-flex;
+    @include flex-basis(20%);
+    @include flex-direction(column);
     @include transition(.75s);
 
     @for $i from 1 through 5 {
@@ -113,10 +113,10 @@ p {
     }
 
     .active & {
-        flex-basis: 5% !important;
+        @include flex-basis(5%);
 
         &.selected {
-            flex-basis: 80% !important;
+            @include flex-basis(80%);
         }
     }
 }
@@ -128,6 +128,7 @@ p {
     background-color: hsla(0, 0%, 100%, .75);
     border-radius: 15px;
     padding: 15px;
+
     @include transition(1.75s);
     @include transform(translateY(-300%));
 
