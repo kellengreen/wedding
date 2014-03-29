@@ -1,0 +1,68 @@
+// APPLIES TO PARENT ELEMENTS
+
+@mixin display-flex {
+    display: -webkit-flex; // Safari 6.1+, iOS 7+, Android Browser 2.1-4.3
+    display:         flex; // Chrome 29+, Firefox 28+, IE 11+, Opera 17+, Android Browser 4.4+
+}
+
+@mixin flex-direction($val) {
+    -webkit-flex-direction: #{$val};
+            flex-direction: #{$val};
+}
+
+@mixin flex-wrap($val) {
+    -webkit-flex-wrap: #{$val};
+            flex-wrap: #{$val};
+}
+
+@mixin flex-flow($val) {
+    -webkit-flex-flow: #{$val};
+            flex-flow: #{$val};
+}
+
+@mixin justify-content($val) {
+    -webkit-justify-content: #{$val};
+            justify-content: #{$val};
+}
+
+@mixin align-items($val) {
+    -webkit-align-items: #{$val};
+            align-items: #{$val};
+}
+
+@mixin align-content($val) {
+    -webkit-align-content: #{$val};
+            align-content: #{$val};
+}
+
+// APPLIES TO CHILD ELEMENTS
+
+@mixin flex($val) {
+    -webkit-flex: #{$val};
+            flex: #{$val};
+}
+
+@mixin flex-grow($val) {
+    -webkit-flex-grow: #{$val};
+            flex-grow: #{$val};
+}
+
+@mixin flex-shrink($val) {
+    -webkit-flex-shrink: #{$val};
+            flex-shrink: #{$val};
+}
+
+@mixin flex-basis($val) {
+    -webkit-flex-basis: #{$val};
+            flex-basis: #{$val};
+}
+
+@mixin align-self($val) {
+    -webkit-align-self: #{$val};
+            align-self: #{$val};
+}
+
+@mixin order($val) {
+    -webkit-order: #{$val};
+            order: #{$val};
+}

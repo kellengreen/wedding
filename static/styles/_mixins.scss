@@ -8,21 +8,6 @@
             transform: #{$value};  // Firefox 16+, IE 10+, Opera 12.10+
 }
 
-@mixin display-flex {
-    display: -webkit-flex;  // Safari 6.1+, Opera 12.10+
-    display:         flex;  // Chrome 29+, Firefox 28+, IE 11+
-}
-
-@mixin flex-direction($value) {
-    -webkit-flex-direction: #{$value};  // Safari 6.1+, Opera 12.10+
-            flex-direction: #{$value};  // Chrome 29+, Firefox 28+, IE 11+
-}
-
-@mixin flex-basis($value) {
-    -webkit-flex-basis: #{$value};  // Safari 6.1+, Opera 12.10+
-            flex-basis: #{$value};  // Chrome 29+, Firefox 28+, IE 11+
-}
-
 //@mixin breakpoint($point) {
 //    @if $point == papa-bear {
 //        @media (max-width: 1600px) { @content; }
