@@ -1,26 +1,3 @@
-console.info('Go Gonzaga G.O.N.Z.A.G.A!');
-
-(function() {
-    var s = {};
-
-    s.asArray = function(object) {
-        for (var array = [], key = 0, value; value = object[key]; ++key) {
-            array.push(value);
-        }
-        return array;
-    };
-
-    s.ready = function(func) {
-        if (document.readyState === 'loading') {
-            document.addEventListener('readystatechange', func);
-        } else {
-            func();
-        }
-    }
-
-    window.shortcuts = s;
-})();
-
 shortcuts.ready(function() {
     var selectedSection,
         sectionAttr = 'section',
@@ -55,3 +32,4 @@ shortcuts.ready(function() {
         });
     });
 });
+console.info('Go Gonzaga G.O.N.Z.A.G.A!');
