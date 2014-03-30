@@ -18,3 +18,9 @@
 
     window.shortcuts = shortcuts;
 })();
+/*
+<script>[
+['', true],
+].forEach(function(a){var d=document,e=d.createElement('script');
+e.src=a[0];e.async=!!a[1];d.head.appendChild(e)})</script>
+*/

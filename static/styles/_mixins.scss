@@ -1,26 +1,31 @@
-@mixin transition($value) {
-    -webkit-transition: #{$value}; // Safari 3.2+
-            transition: #{$value}; // Chrome 26, Firefox 16+, IE 10+, Opera 12.10+
+@mixin transition($val) {
+    -webkit-transition: #{$val}; // Safari 3.2+
+            transition: #{$val}; // Chrome 26, Firefox 16+, IE 10+, Opera 12.10+
 }
 
-@mixin transform($value) {
-    -webkit-transform: #{$value};  // Chrome, Safari 3.1+
-            transform: #{$value};  // Firefox 16+, IE 10+, Opera 12.10+
+@mixin transform($val) {
+    -webkit-transform: #{$val};  // Chrome, Safari 3.1+
+            transform: #{$val};  // Firefox 16+, IE 10+, Opera 12.10+
 }
 
-//@mixin breakpoint($point) {
-//    @if $point == papa-bear {
-//        @media (max-width: 1600px) { @content; }
-//    }
-//    @else if $point == mama-bear {
-//        @media (max-width: 1250px) { @content; }
-//    }
-//    @else if $point == baby-bear {
-//        @media (max-width: 650px)  { @content; }
-//    }
-//}
-//
-//@media (max-width: @screen-xs-max) { ... }
-//@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
-//@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-//@media (min-width: @screen-lg-min) { ... }
+@mixin xs-and-up {
+    @content
+}
+
+@mixin sm-and-up {
+    @media (min-width: 768px) {
+        @content
+    }
+}
+
+@mixin md-and-up {
+    @media (min-width: 992px) {
+        @content
+    }
+}
+
+@mixin lg-and-up {
+    @media (min-width: 1200px) {
+        @content
+    }
+}

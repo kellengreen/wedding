@@ -38,27 +38,39 @@ p {
   z-index: 1;
   background-color: black; }
   .nav a {
-    line-height: 56px;
-    font-size: 28px;
     text-decoration: none;
     color: white;
     margin: 0 15px;
+    white-space: nowrap;
     cursor: pointer;
     -webkit-transition: 0.25s;
-    transition: 0.25s; }
+    transition: 0.25s;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0 5px; }
     .nav a:hover, .nav a.selected {
       color: #448cca;
       text-decoration: none; }
-  .nav a:nth-of-type(1) {
-    font-family: 'Sail', cursive; }
-  .nav a:nth-of-type(2) {
-    font-family: 'Montez', cursive; }
-  .nav a:nth-of-type(3) {
-    font-family: 'The Girl Next Door', cursive; }
-  .nav a:nth-of-type(4) {
-    font-family: 'Finger Paint', cursive; }
-  .nav a:nth-of-type(5) {
-    font-family: 'Nothing You Could Do', cursive; }
+    @media (min-width: 768px) {
+      .nav a {
+        font-size: 20px;
+        line-height: 40px;
+        margin: 0 10px; } }
+    @media (min-width: 992px) {
+      .nav a {
+        font-size: 28px;
+        line-height: 55px;
+        margin: 0 15px; } }
+    .nav a:nth-of-type(1) {
+      font-family: 'Sail', cursive; }
+    .nav a:nth-of-type(2) {
+      font-family: 'Montez', cursive; }
+    .nav a:nth-of-type(3) {
+      font-family: 'The Girl Next Door', cursive; }
+    .nav a:nth-of-type(4) {
+      font-family: 'Nothing You Could Do', cursive; }
+    .nav a:nth-of-type(5) {
+      font-family: 'Finger Paint', cursive; }
 
 .sections {
   height: 100%;
@@ -66,7 +78,6 @@ p {
   display: flex; }
 
 .section {
-  padding: 15px;
   background-position: 50% 50%;
   background-size: cover;
   display: -webkit-flex;
@@ -76,7 +87,14 @@ p {
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-transition: 0.75s;
-  transition: 0.75s; }
+  transition: 0.75s;
+  padding: 10px; }
+  @media (min-width: 768px) {
+    .section {
+      padding: 15px; } }
+  @media (min-width: 992px) {
+    .section {
+      padding: 25px; } }
   .section:nth-of-type(1) {
     background-image: url("/static/images/bg1_v01.jpg"); }
   .section:nth-of-type(2) {
@@ -88,22 +106,39 @@ p {
   .section:nth-of-type(5) {
     background-image: url("/static/images/bg5_v01.jpg"); }
   .active .section {
-    -webkit-flex-basis: 5%;
-    flex-basis: 5%; }
+    -webkit-flex-basis: 2.5%;
+    flex-basis: 2.5%; }
+    @media (min-width: 768px) {
+      .active .section {
+        -webkit-flex-basis: 7.5%;
+        flex-basis: 7.5%; } }
+    @media (min-width: 992px) {
+      .active .section {
+        -webkit-flex-basis: 10%;
+        flex-basis: 10%; } }
     .active .section.selected {
-      -webkit-flex-basis: 80%;
-      flex-basis: 80%; }
+      -webkit-flex-basis: 90%;
+      flex-basis: 90%; }
+      @media (min-width: 768px) {
+        .active .section.selected {
+          -webkit-flex-basis: 70%;
+          flex-basis: 70%; } }
+      @media (min-width: 992px) {
+        .active .section.selected {
+          -webkit-flex-basis: 60%;
+          flex-basis: 60%; } }
 
 .content {
-  width: 100%;
+  display: none;
   overflow: auto;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   padding: 15px;
-  -webkit-transition: 1.75s;
-  transition: 1.75s;
-  -webkit-transform: translateY(-300%);
-  transform: translateY(-300%); }
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
   .selected .content {
-    -webkit-transform: none;
-    transform: none; }
+    display: block; }
+  .done .content {
+    opacity: 1; }

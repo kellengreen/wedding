@@ -16,7 +16,6 @@ h4 {
 p {
     font-size: 16px;
     line-height: 27px;
-
 }
 
 // shared
@@ -54,11 +53,10 @@ p {
     background-color: hsl(0, 0%, 0%);
 
     a {
-        line-height: 56px;
-        font-size: 28px;
         text-decoration: none;
         color: hsl(0, 0%, 100%);
         margin: 0 15px;
+        white-space: nowrap;
         cursor: pointer;
         @include transition(.25s);
 
@@ -67,26 +65,44 @@ p {
             color: hsl(208, 56%, 53%);
             text-decoration: none;
         }
-    }
 
-    a:nth-of-type(1) {
-        font-family: 'Sail', cursive;
-    }
+        @include xs-and-up {
+            font-size: 14px;
+            line-height: 30px;
+            margin: 0 5px;
+        }
 
-    a:nth-of-type(2) {
-        font-family: 'Montez', cursive;
-    }
+        @include sm-and-up {
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0 10px;
+        }
 
-    a:nth-of-type(3) {
-        font-family: 'The Girl Next Door', cursive;
-    }
+        @include md-and-up {
+            font-size: 28px;
+            line-height: 55px;
+            margin: 0 15px;
+        }
 
-    a:nth-of-type(4) {
-        font-family: 'Finger Paint', cursive;
-    }
+        &:nth-of-type(1) {
+            font-family: 'Sail', cursive;
+        }
 
-    a:nth-of-type(5) {
-        font-family: 'Nothing You Could Do', cursive;
+        &:nth-of-type(2) {
+            font-family: 'Montez', cursive;
+        }
+
+        &:nth-of-type(3) {
+            font-family: 'The Girl Next Door', cursive;
+        }
+
+        &:nth-of-type(4) {
+            font-family: 'Nothing You Could Do', cursive;
+        }
+
+        &:nth-of-type(5) {
+            font-family: 'Finger Paint', cursive;
+        }
     }
 }
 
@@ -98,7 +114,6 @@ p {
 
 // individual sections
 .section {
-    padding: 15px;
     background-position: 50% 50%;
     background-size: cover;
 
@@ -107,6 +122,18 @@ p {
     @include flex-direction(column);
     @include transition(.75s);
 
+    @include xs-and-up {
+        padding: 10px;
+    }
+
+    @include sm-and-up {
+        padding: 15px;
+    }
+
+    @include md-and-up {
+        padding: 25px;
+    }
+
     @for $i from 1 through 5 {
         &:nth-of-type(#{$i}) {
             background-image: url('/static/images/bg#{$i}_v01.jpg');
@@ -114,26 +141,53 @@ p {
     }
 
     .active & {
-        @include flex-basis(5%);
+
+        @include xs-and-up {
+            @include flex-basis(2.5%);
+        }
+
+        @include sm-and-up {
+            @include flex-basis(7.5%);
+        }
+
+        @include md-and-up {
+            @include flex-basis(10%);
+        }
+
 
         &.selected {
-            @include flex-basis(80%);
+            @include xs-and-up {
+                @include flex-basis(90%);
+            }
+
+            @include sm-and-up {
+                @include flex-basis(70%);
+            }
+
+            @include md-and-up {
+                @include flex-basis(60%);
+            }
         }
     }
 }
 
 // section content
 .content {
-    width: 100%;
+    display: none;
     overflow: auto;
+    width: 100%;
     background-color: hsla(0, 0%, 100%, .75);
     border-radius: 15px;
     padding: 15px;
+    opacity: 0;
 
-    @include transition(1.75s);
-    @include transform(translateY(-300%));
+    @include transition(.4s);
 
     .selected & {
-        @include transform(none);
+        display: block;
+    }
+
+    .done & {
+        opacity: 1;
     }
 }
