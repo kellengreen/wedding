@@ -40,7 +40,7 @@ shortcuts.ready(function() {
         sectionElem.addEventListener('transitionend', function() {
             if (sectionElem.classList.contains(selectedClass)) {
                 sectionElem.classList.add('done');
-                window.getSelection().removeAllRanges(); // FF highlights the text for some reason
+                window.getSelection().removeAllRanges(); // FF highlights the section text for some reason
             }
         });
 
