@@ -88,6 +88,7 @@ p {
   flex-direction: column;
   -webkit-transition: 0.75s;
   transition: 0.75s;
+  opacity: 1.0;
   padding: 10px; }
   @media (min-width: 768px) {
     .section {
@@ -117,6 +118,7 @@ p {
         -webkit-flex-basis: 10%;
         flex-basis: 10%; } }
     .active .section.selected {
+      opacity: 0.99;
       -webkit-flex-basis: 90%;
       flex-basis: 90%; }
       @media (min-width: 768px) {

@@ -41,18 +41,7 @@
         <div section="cast" class="section">
             <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
-                {% for person in wedding_party %}
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-lg-3">
-                            <img class="img-responsive center-block" src="/static/images/{{ person.image }}">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-lg-9">
-                            <h4>{{ person.name }} <span>{{ person.title }}</span></h4>
-
-                            <p>{{ person.description }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
+                {% include 'the_cast.html' %}
             </div>
         </div>
         <div section="stay" class="section">

@@ -122,6 +122,9 @@ p {
     @include flex-direction(column);
     @include transition(.75s);
 
+    // IE 11 sucks
+    opacity: 1.0;
+
     @include xs-and-up {
         padding: 10px;
     }
@@ -156,6 +159,10 @@ p {
 
 
         &.selected {
+
+            // IE 11 sucks
+            opacity: 0.99;
+
             @include xs-and-up {
                 @include flex-basis(90%);
             }

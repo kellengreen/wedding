@@ -1,4 +1,5 @@
 (function() {
+
     var shortcuts = {};
 
     shortcuts.asArray = function(object) {
@@ -8,16 +9,22 @@
         return array;
     };
 
-    shortcuts.ready = function(func) {
+    shortcuts.ready = function(callback) {
+        var event = 'readystatechange',
+            listener = function() {
+                document.removeEventListener(event, listener);
+                callback();
+            };
         if (document.readyState === 'loading') {
-            document.addEventListener('readystatechange', func);
+            document.addEventListener(event, listener);
         } else {
-            func();
+            callback();
         }
     }
 
     window.shortcuts = shortcuts;
-})();
+
+ })();
 
 shortcuts.ready(function() {
     var selectedSection,
@@ -33,6 +40,7 @@ shortcuts.ready(function() {
         sectionElem.addEventListener('transitionend', function() {
             if (sectionElem.classList.contains(selectedClass)) {
                 sectionElem.classList.add('done');
+                window.getSelection().removeAllRanges(); // FF highlights the text for some reason
             }
         });
 
@@ -62,4 +70,5 @@ shortcuts.ready(function() {
         });
     });
 });
+
 console.info('Go Gonzaga G.O.N.Z.A.G.A!');
