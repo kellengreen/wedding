@@ -44,7 +44,7 @@ def home_handler(path):
             'title': 'Best Man',
             'image': 'nick_v01.jpg',
             'description': '''
-                Kellen and Nick have been friends since 8th grade where they met in Spokane at University High School Summer football practice. In high school Kellen and Nick spent time together hanging out at lake Coeur d' Alene, misbehaving with underage activities, and helping each other through tough family times. Kellen chose Nick to be his best man because he can count on him to be there anytime of the day for any reason; Nick is truly a man who would give you the shirt off his back. Kellen and Alison are excited to see Nick on a new adventure in St.. Louis MO where he recently moved with his fiancee Adelina.
+                Kellen and Nick have been friends since 8th grade where they met in Spokane at University High School Summer football practice. In high school Kellen and Nick spent time together hanging out at lake Coeur d' Alene, misbehaving in underage activities, and helping each other through tough family times. Kellen chose Nick to be his best man because he can count on him to be there anytime of the day for any reason; Nick is truly a man who would give you the shirt off his back. Kellen and Alison are excited to see Nick on a new adventure in St.. Louis MO where he recently moved with his fiancee Adelina.
                 '''
         },
         {
