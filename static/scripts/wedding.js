@@ -48,8 +48,9 @@ shortcuts.ready(function() {
             evt.cancelBubble = true;
             selectedSection = sectionElem.getAttribute(sectionAttr);
 
-            // sections container
+            // sections container and ga events
             if (selectedSection) {
+                ga('send', 'event', selectedSection, 'click');
                 sectionsContainer.classList.add(activeClass);
             } else {
                 sectionsContainer.classList.remove(activeClass);

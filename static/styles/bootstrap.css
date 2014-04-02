@@ -2,9 +2,14 @@ html,
 body {
   height: 100%; }
 
+h2 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 38px;
+  text-transform: uppercase; }
+
 h4 {
   font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 25px; }
+  font-size: 28px; }
   h4 span {
     color: gray; }
 
@@ -19,9 +24,17 @@ p {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-.row-spacing .row {
+.prominent {
+  font-weight: bold; }
+
+.row-spacing-sm .row {
+  margin-bottom: 10px; }
+  .row-spacing-sm .row:last-of-type {
+    margin-bottom: 0px; }
+
+.row-spacing-lg .row {
   margin-bottom: 20px; }
-  .row-spacing .row:last-of-type {
+  .row-spacing-lg .row:last-of-type {
     margin-bottom: 0px; }
 
 .close-btn {

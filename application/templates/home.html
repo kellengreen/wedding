@@ -11,6 +11,13 @@
     <link rel="icon" href="/static/images/favicon152_v01.png">
     <link rel="apple-touch-icon-precomposed" href="/static/images/favicon152_v01.png">
     <script async src="/static/scripts/wedding.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create','UA-49606756-1', 'zagwedding.com');ga('send','pageview');
+    </script>
 </head>
 <body>
 <div class="window">
@@ -27,31 +34,31 @@
     </div>
     <div class="sections">
         <div section="couple" class="section">
-            <div class="content container-fluid" style="transform(translateY(-300%))">
+            <div class="content container-fluid row-spacing-sm">
                 {% include 'close_btn.html' %}
                 {% include 'the_couple.html' %}
             </div>
         </div>
         <div section="day" class="section">
-            <div class="content container-fluid row-spacing">
+            <div class="content container-fluid row-spacing-lg">
                 {% include 'close_btn.html' %}
                 {% include 'the_day.html' %}
             </div>
         </div>
         <div section="cast" class="section">
-            <div class="content container-fluid row-spacing">
+            <div class="content container-fluid row-spacing-lg">
                 {% include 'close_btn.html' %}
                 {% include 'the_cast.html' %}
             </div>
         </div>
         <div section="stay" class="section">
-            <div class="content container-fluid row-spacing">
+            <div class="content container-fluid row-spacing-sm">
                 {% include 'close_btn.html' %}
                 {% include 'the_stay.html' %}
             </div>
         </div>
         <div section="city" class="section">
-            <div class="content container-fluid row-spacing">
+            <div class="content container-fluid row-spacing-sm">
                 {% include 'close_btn.html' %}
                 {% include 'the_city.html' %}
             </div>
