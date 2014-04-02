@@ -44,7 +44,7 @@ def home_handler(path):
             'title': 'Best Man',
             'image': 'nick_v01.jpg',
             'description': '''
-                Kellen and Nick have been friends since 8th grade where they met in Spokane at University High School Summer football practice. In high school Kellen and Nick spent time together hanging out at lake Coeur d' Alene, evading police after long nights of underage drinking, and helping each other through tough family times. Kellen chose Nick to be his best man because he can count on him to be there anytime of the day for any reason; Nick is truly a man who would give you the shirt off his back. Kellen and Alison are excited to see Nick on a new adventure in St.. Louis MO where he recently moved with his fiancee Adelina.
+                Kellen and Nick have been friends since 8th grade where they met in Spokane at University High School Summer football practice. In high school Kellen and Nick spent time together hanging out at lake Coeur d' Alene, misbehaving with underage activities, and helping each other through tough family times. Kellen chose Nick to be his best man because he can count on him to be there anytime of the day for any reason; Nick is truly a man who would give you the shirt off his back. Kellen and Alison are excited to see Nick on a new adventure in St.. Louis MO where he recently moved with his fiancee Adelina.
                 '''
         },
         {
@@ -68,7 +68,7 @@ def home_handler(path):
             'title': 'Groomsman',
             'image': 'justin_v01.jpg',
             'description': '''
-                Like Greg, Kellen met Justin as a freshman at Gonzaga University as dorm-mates in Roncalli hall. They quickly became friends as they realized their love of super smash brothers and winter activities! Kellen and Justin ended up living together the rest of their time at GU after which Justin joined the Peace Corps and spent time in Mali Africa helping to engineer a sustainable water filtration system. Justin met his fiancee Caitlin while in the Corps and they are celebrating their wedding just a few weeks before Kellen and Alison in Kentucky.
+                Like Greg, Kellen met Justin as a freshman at Gonzaga University as dorm-mates in Roncalli hall. As typical boys from the Northwest, they quickly became friends as they realized their shared love of winter activities. Kellen and Justin ended up living together the rest of their time at GU after which Justin joined the Peace Corps and spent time in Mali Africa helping to engineer a sustainable water filtration system. Justin met his fiancee Caitlin while in the Corps and they are celebrating their wedding just a few weeks before Kellen and Alison in Kentucky.
                 '''
         },
         {
