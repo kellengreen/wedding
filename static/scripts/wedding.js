@@ -2,6 +2,35 @@
 
     var shortcuts = {};
 
+    shortcuts.whichTransitionEnd = (function() {
+        var transition;
+
+        return {
+            get: function() {
+                if (!transition) {
+                    var transitions = {
+                      'transition': 'transitionend',
+                      'WebkitTransition': 'webkitTransitionEnd'
+                    }
+
+                    for(var key in transitions) {
+                        if (document.body.style[key] !== undefined) {
+                            transition = transitions[key];
+                            break;
+                        }
+                    }
+                }
+                return transition;
+            }
+        }
+    })();
+
+    shortcuts.addEventListenerMulti = function(object, events, listener) {
+        events.forEach(function(event) {
+            object.addEventListener(event, listener);
+        });
+    };
+
     shortcuts.asArray = function(object) {
         for (var array = [], key = 0, value; value = object[key]; ++key) {
             array.push(value);
@@ -37,7 +66,7 @@ shortcuts.ready(function() {
 
     sectionElems.forEach(function(sectionElem) {
 
-        sectionElem.addEventListener('transitionend', function() {
+        sectionElem.addEventListener(shortcuts.whichTransitionEnd.get(), function() {
             if (sectionElem.classList.contains(selectedClass)) {
                 sectionElem.classList.add('done');
                 window.getSelection().removeAllRanges(); // FF highlights the section text for some reason

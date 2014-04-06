@@ -32,6 +32,9 @@ p {
   .row-spacing-sm .row:last-of-type {
     margin-bottom: 0px; }
 
+.col-spacing {
+  margin-bottom: 10px; }
+
 .row-spacing-lg .row {
   margin-bottom: 20px; }
   .row-spacing-lg .row:last-of-type {
