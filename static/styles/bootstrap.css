@@ -151,8 +151,8 @@ p {
   padding: 15px;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: opacity .5s, z-index 0s .5s;
+  transition: opacity .5s, z-index 0s .5s; }
   .selected .content {
     -webkit-transition: opacity 0.5s 0.75s;
     transition: opacity 0.5s 0.75s;
