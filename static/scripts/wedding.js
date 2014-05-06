@@ -2,36 +2,7 @@
 
     var shortcuts = {};
 
-    shortcuts.whichTransitionEnd = (function() {
-        var transition;
-
-        return {
-            get: function() {
-                if (!transition) {
-                    var transitions = {
-                      'transition': 'transitionend',
-                      'WebkitTransition': 'webkitTransitionEnd'
-                    }
-
-                    for(var key in transitions) {
-                        if (document.body.style[key] !== undefined) {
-                            transition = transitions[key];
-                            break;
-                        }
-                    }
-                }
-                return transition;
-            }
-        }
-    })();
-
-    shortcuts.addEventListenerMulti = function(object, events, listener) {
-        events.forEach(function(event) {
-            object.addEventListener(event, listener);
-        });
-    };
-
-    shortcuts.asArray = function(object) {
+    shortcuts.toArray = function(object) {
         for (var array = [], key = 0, value; value = object[key]; ++key) {
             array.push(value);
         }
@@ -39,13 +10,12 @@
     };
 
     shortcuts.ready = function(callback) {
-        var event = 'readystatechange',
-            listener = function() {
+        if (document.readyState === 'loading') {
+            var event = 'readystatechange';
+            document.addEventListener(event, function listener() {
                 document.removeEventListener(event, listener);
                 callback();
-            };
-        if (document.readyState === 'loading') {
-            document.addEventListener(event, listener);
+            });
         } else {
             callback();
         }
@@ -61,31 +31,21 @@ shortcuts.ready(function() {
         selectedClass = 'selected',
         activeClass = 'active',
         doneClass = 'done',
-        sectionElems = shortcuts.asArray(document.querySelectorAll('[' + sectionAttr + ']')),
+        sectionElems = shortcuts.toArray(document.querySelectorAll('[' + sectionAttr + ']')),
         sectionsContainer = document.querySelector('.' + sectionAttr + 's');
 
     sectionElems.forEach(function(sectionElem) {
 
-        sectionElem.addEventListener(shortcuts.whichTransitionEnd.get(), function() {
-            if (sectionElem.classList.contains(selectedClass)) {
-                sectionElem.classList.add('done');
-                window.getSelection().removeAllRanges(); // FF highlights the section text for some reason
-            }
-        });
-
         sectionElem.addEventListener('click', function(evt) {
             evt.cancelBubble = true;
-            selectedSection = sectionElem.getAttribute(sectionAttr);
 
-            // sections container and ga events
+            selectedSection = sectionElem.getAttribute(sectionAttr);
             if (selectedSection) {
-                ga('send', 'event', selectedSection, 'click');
                 sectionsContainer.classList.add(activeClass);
             } else {
                 sectionsContainer.classList.remove(activeClass);
             }
 
-            // section elements
             sectionElems.forEach(function(sectionElem) {
                 var sectionValue = sectionElem.getAttribute(sectionAttr);
                 if (sectionValue) {
@@ -100,5 +60,3 @@ shortcuts.ready(function() {
         });
     });
 });
-
-console.info('Go Gonzaga G.O.N.Z.A.G.A!');

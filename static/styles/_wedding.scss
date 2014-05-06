@@ -74,7 +74,6 @@ p {
 // top navigation
 .nav {
     width: 100%;
-    z-index: 1;
     background-color: hsl(0, 0%, 0%);
 
     a {
@@ -147,9 +146,6 @@ p {
     @include flex-direction(column);
     @include transition(.75s);
 
-    // IE 11 sucks
-    opacity: 1.0;
-
     @include xs-and-up {
         padding: 10px;
     }
@@ -185,9 +181,6 @@ p {
 
         &.selected {
 
-            // IE 11 sucks
-            opacity: 0.99;
-
             @include xs-and-up {
                 @include flex-basis(90%);
             }
@@ -205,21 +198,19 @@ p {
 
 // section content
 .content {
-    display: none;
     overflow: auto;
     width: 100%;
     background-color: hsla(0, 0%, 100%, .75);
     border-radius: 15px;
     padding: 15px;
     opacity: 0;
+    z-index: -1;
 
-    @include transition(.4s);
+    @include transition(.5s);
 
     .selected & {
-        display: block;
-    }
-
-    .done & {
+        @include transition(opacity .5s .75s);
         opacity: 1;
+        z-index: 0;
     }
 }
