@@ -209,8 +209,8 @@ p {
     @include transition('opacity .5s, z-index 0s .5s');
 
     .selected & {
-        @include transition(opacity .5s .75s);
         opacity: 1;
         z-index: 0;
+        @include transition(opacity .5s .75s);
     }
 }
