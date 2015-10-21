@@ -1,0 +1,11 @@
+{
+    "name": "wedding",
+    "version": "0.0.0",
+    "devDependencies": {
+        "grunt": "0.4.x",
+        "grunt-contrib-sass": "0.7.x",
+        "grunt-contrib-watch": "v0.6.x",
+        "load-grunt-tasks": "0.4.x",
+        "time-grunt": "0.3.x"
+    }
+}

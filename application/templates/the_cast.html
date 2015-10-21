@@ -5,8 +5,7 @@
         </div>
         <div class="col-xs-12 col-sm-8">
             <h4>{{ person.name }} <span>{{ person.title }}</span></h4>
-
-            <p>{{ person.description }}</p>
+            <p>{{ person.description|safe }}</p>
         </div>
     </div>
 {% endfor %}

@@ -1,7 +1,7 @@
 from __future__ import absolute_import, division
-from application import settings, shortcuts
-import sys
 import os
+import sys
+from application import settings
 
 # add required libraries to system path
 for lib_name in settings.REQUIRED_LIBS:
@@ -12,7 +12,6 @@ for lib_name in settings.REQUIRED_LIBS:
 # start flask
 from flask import Flask
 app = Flask(__name__)
-app.debug = settings.DEBUG
 
 # add views
 from application import views

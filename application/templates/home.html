@@ -10,11 +10,19 @@
     <link rel="stylesheet" href="/static/styles/bootstrap.css">
     <link rel="icon" href="/static/images/favicon152_v01.png">
     <link rel="apple-touch-icon-precomposed" href="/static/images/favicon152_v01.png">
-    <script src="/static/scripts/wedding.js"></script>
+    <script async src="/static/scripts/wedding.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-49606756-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
 <div class="window">
-    <div class="nav container-fluid">
+    <div class="nav container-fluid ">
         <div class="row">
             <div class="col-xs-12">
                 <a section="couple">The Couple</a>
@@ -27,36 +35,39 @@
     </div>
     <div class="sections">
         <div section="couple" class="section">
-            <div class="content container-fluid row-spacing-sm">
+            <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
                 {% include 'the_couple.html' %}
             </div>
         </div>
         <div section="day" class="section">
-            <div class="content container-fluid row-spacing-lg">
+            <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
                 {% include 'the_day.html' %}
             </div>
         </div>
         <div section="cast" class="section">
-            <div class="content container-fluid row-spacing-lg">
+            <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
                 {% include 'the_cast.html' %}
             </div>
         </div>
         <div section="stay" class="section">
-            <div class="content container-fluid row-spacing-sm">
+            <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
                 {% include 'the_stay.html' %}
             </div>
         </div>
         <div section="city" class="section">
-            <div class="content container-fluid row-spacing-sm">
+            <div class="content container-fluid row-spacing">
                 {% include 'close_btn.html' %}
                 {% include 'the_city.html' %}
             </div>
         </div>
     </div>
 </div>
+<!--[if IE]>
+<script>document.body.innerHTML="<h4>We're sorry, but with all this wedding planning, we didn't have time to support your legacy web browser. Information on how to upgrade can be found <a href='https://browser-update.org/update.html'>here</a>.</h4>"</script>
+<![endif]-->
 </body>
 </html>

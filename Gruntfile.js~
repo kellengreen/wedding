@@ -1,0 +1,30 @@
+module.exports = function(grunt) {
+
+    require('time-grunt')(grunt);
+    require('load-grunt-tasks')(grunt);
+
+    grunt.initConfig({
+
+        pkg: grunt.file.readJSON('package.json'),
+
+        sass: {
+            options: {
+                style: 'compressed'
+            },
+            main: {
+                files: {
+                    'static/styles/main.css': 'static/src/sass/bootstrap.scss'
+                }
+            }
+        },
+
+        watch: {
+            sass: {
+                files: 'static/src/sass/**.scss',
+                tasks: ['sass:main']
+            }
+        }
+
+    });
+
+};
